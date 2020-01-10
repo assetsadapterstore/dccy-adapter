@@ -1,9 +1,5 @@
 # dccy-adapter
 
-## 项目依赖库
-
-- [openwallet](https://github.com/blocktree/openwallet.git)
-- [eosio-adapter](https://github.com/blocktree/eosio-adapter.git)
 
 注意：
 要在最终引用此适配包的项目中，replace eos-go引用，即在go.mod中：

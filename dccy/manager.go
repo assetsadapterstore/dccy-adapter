@@ -47,7 +47,6 @@ func NewWalletManager(cacheManager openwallet.ICacheManager) *WalletManager {
 	wm.ContractDecoder = NewContractDecoder(&wm)
 	wm.CacheManager = cacheManager
 
-	eos.RegisterAction(eos.AN("eosio.token"), eos.ActN("extransfer"), ExTransfer{})
 	ecc.PublicKeyPrefixs = []string{"EOS", "DCCY"}
 
 	return &wm

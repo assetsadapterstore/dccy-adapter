@@ -29,8 +29,6 @@ import (
 )
 
 const (
-	//blockchainBucket = "blockchain" // blockchain dataset
-	//periodOfTask      = 5 * time.Second // task interval
 	maxExtractingSize = 10 // thread count
 )
 
