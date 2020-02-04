@@ -2,6 +2,7 @@ package addrdec
 
 import (
 	"fmt"
+	"github.com/blocktree/openwallet/openwallet"
 	"strings"
 
 	"github.com/blocktree/go-owcdrivers/addressEncoder"
@@ -20,6 +21,7 @@ var (
 
 //AddressDecoderV2
 type AddressDecoderV2 struct {
+	*openwallet.AddressDecoderV2Base
 	IsTestNet bool
 }
 

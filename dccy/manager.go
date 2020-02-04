@@ -29,6 +29,7 @@ type WalletManager struct {
 	Api             *eos.API                        // 节点客户端
 	Config          *WalletConfig                   // 节点配置
 	Decoder         openwallet.AddressDecoder       //地址编码器
+	DecoderV2       openwallet.AddressDecoderV2     //地址编码器2
 	TxDecoder       openwallet.TransactionDecoder   //交易单编码器
 	Log             *log.OWLogger                   //日志工具
 	ContractDecoder openwallet.SmartContractDecoder //智能合约解析器
@@ -42,6 +43,7 @@ func NewWalletManager(cacheManager openwallet.ICacheManager) *WalletManager {
 	wm.Config = NewConfig(Symbol)
 	wm.Blockscanner = NewDCCYBlockScanner(&wm)
 	wm.Decoder = NewAddressDecoder(&wm)
+	wm.DecoderV2 = NewAddressDecoder(&wm)
 	wm.TxDecoder = NewTransactionDecoder(&wm)
 	wm.Log = log.NewOWLogger(wm.Symbol())
 	wm.ContractDecoder = NewContractDecoder(&wm)
